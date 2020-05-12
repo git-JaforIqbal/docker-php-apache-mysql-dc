@@ -127,7 +127,8 @@ The following simple Dockerfiles are what we're using in this example to build a
 
 #### apache/Dockerfile
 ```
-FROM httpd:2.4.33-alpine
+ARG APACHE_VERSION=
+FROM httpd:${APACHE_VERSION:+${APACHE_VERSION}-}alpine
 
 RUN apk update; \
     apk upgrade;
@@ -140,7 +141,8 @@ RUN echo "Include /usr/local/apache2/conf/demo.apache.conf" \
 
 #### php/Dockerfile
 ```
-FROM php:7.2.7-fpm-alpine3.7
+ARG PHP_VERSION=
+FROM php:${PHP_VERSION:+${PHP_VERSION}-}fpm-alpine
 
 RUN apk update; \
     apk upgrade;
