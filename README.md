@@ -42,7 +42,10 @@ if ($conn->connect_error) {
 This code attempts to connect to a MySQL database using the mysqli interface from PHP. If successful, it prints a success. If not, it prints a failed message. 
 
 ### Environment File
+
 Have to make a .env file for config
+
+```
 PHP_VERSION=7.3
 MYSQL_VERSION=5.7
 APACHE_VERSION=2.4.33
@@ -53,6 +56,7 @@ DB_USERNAME=otherUser
 DB_PASSWORD=password
 
 PROJECT_ROOT=./public_html
+```
 
 ### Docker Compose
 
