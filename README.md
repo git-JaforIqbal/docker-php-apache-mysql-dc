@@ -193,12 +193,13 @@ Volumes are a very powerful construct of the Docker world and we're only scratch
 $ docker-compose up
 
 <... some details omitted ...>
-php_1     | [16-Jul-2018 02:08:11] NOTICE: fpm is running, pid 1
-php_1     | [16-Jul-2018 02:08:11] NOTICE: ready to handle connections
-apache_1  | [Mon Jul 16 02:08:12.494294 2018] [pid 1:tid 140290664872840] AH00489: Apache/2.4.33 (Unix)
-apache_1  | [Mon Jul 16 02:08:12.496833 2018] [pid 1:tid 140290664872840] AH00094: Command line: 'httpd -D FOREGROUND'
-mysql_1   | 2018-07-16 02:08:12 1 [Note] mysqld: ready for connections.
-mysql_1   | Version: '5.6.40'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+php       | [12-May-2020 15:04:03] NOTICE: fpm is running, pid 1
+php       | [12-May-2020 15:04:03] NOTICE: ready to handle connections
+apache    | [Tue May 12 15:04:03.637648 2020] [mpm_event:notice] [pid 1:tid 140140729162632] AH00489: Apache/2.4.33 (Unix) configured -- resuming normal operations
+apache    | [Tue May 12 15:04:03.637763 2020] [core:notice] [pid 1:tid 140140729162632] AH00094: Command line: 'httpd -D FOREGROUND'
+mysql     | 2020-05-12T15:04:12.274271Z 0 [Note] mysqld: ready for connections.
+mysql     | Version: '5.7.28'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+
 ```
 Notice how these 3 daemons run on PID 1 inside of each container, this is considered a best-practice for building containers!
 
