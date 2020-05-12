@@ -15,7 +15,9 @@ There are 5 simple files for this demo that you can clone from https://github.co
 ├── php
 │   └── Dockerfile
 └── public_html
-    └── index.php
+|    └── index.php
+├── .env
+
 ```
 
 Once this structure is replicated or cloned with these files, and Docker installed locally, you can simply run "docker-compose up" from the root of the project to run this entire demo, and point your browser (or curl) to http://localhost:80 to see the demo. We will get into what "docker-compose" is, and what makes up this basic demonstration in the following sections!
@@ -43,7 +45,7 @@ This code attempts to connect to a MySQL database using the mysqli interface fro
 
 ### Environment File
 
-Have to make a .env file for config
+Have to make a .env file in this root directory for config
 
 ```
 PHP_VERSION=7.3
